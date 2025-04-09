@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangles Website</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+       
+      
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #333;
+        }
+
+        .navbar .navbar-nav a {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            margin-left: 20px;
+            color: white;
+        }
+
+        .navbar .navbar-nav a:hover {
+            color: gold !important;
+            border-bottom: 2px solid gold;
+        }
+
+        /* Hero styling */
+        .hero-section {
+            background: url('./gold-bangles-are-stacked-top-each-other_1188452-6967.avif') no-repeat center center/cover;
+            height: 80vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-family: "Poppins", sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+        }
+
+        /* About styling*/
+        .about-section {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f7f7f7;
+        }
+
+        .about-section h2 {
+            font-family: "Poppins", sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .about-section p {
+            font-family: "Poppins", sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #555;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+/* quality styling  */
+#quality h1{
+    font-family: "Poppins", sans-serif;
+            /* font-size: 4rem; */
+            font-weight: 700;
+}
+
+        /* Product styling */
+        .product-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 40px 0;
+            
+            
+        }
+
+        .product-section .container h2{
+            font-family: "Poppins", sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .product-card {
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-card h3 {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5rem;
+            color: #333;
+            
+        }
+
+        
+        /* Customers styling  */
+        #customers .section-title{
+            font-family: "Poppins", sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+
+        /* Footer Styling */
+        footer {
+            background: #0d0552;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        footer .footer-container div {
+            flex: 1;
+            min-width: 250px;
+            padding: 10px;
+        }
+
+        footer h2{
+            color: #ffc800;
+        }
+
+        footer h3{
+            color: #ffc800;
+
+        }
+        footer i {
+            color: #FFD43B;
+            font-size: 20px;
+        }
+
+        footer .footer-container p {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+   
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="./img/logo rb.png" alt="Logo" width="50px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="./hello.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="./product.html">Product</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="./about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Welcome to Our About <br>Section</h1>
+    </section>
+
+    <section class="about-section">
+      <div class="container">
+          <div class="row align-items-center">
+              <!-- Text Column -->
+              <div class="col-md-6">
+                  <h2>Handmade with Love</h2>
+                  <p>Our Handmade with Love bangles are crafted with passion and dedication. Every piece is unique, designed to add elegance to your special moments. We take pride in our craftsmanship and dedication to quality, offering timeless pieces for your weddings, festivals, and everyday wear.</p>
+              </div>
+              <!-- Image Column -->
+              <div class="col-md-6">
+                  <div class="row">
+                      <div class="col-4">
+                          <img src="./7jpg.jpg" alt="Bangle Crafting 1" class="img-fluid rounded mb-3">
+                      </div>
+                      <div class="col-4">
+                          <img src="./1 jpg.jpg" alt="Bangle Crafting 2" class="img-fluid rounded mb-3">
+                      </div>
+                      <div class="col-4">
+                          <img src="./6jpg.avif" alt="Bangle Crafting 3" class="img-fluid rounded mb-3">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+    <!-- Product Section -->
+    <section class="product-section" class="py-5" style="background-color: #f9f9f9;">
+      <div class="container text-center">
+          <h2 class="mb-5">Our Exclusive Bangle Collections</h2>
+  
+          <!-- Product Cards Row -->
+          <div class="row">
+              <!-- Product Card 1 -->
+              <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <img src="./1 jpg.jpg" alt="Bangle 1" class="card-img-top">
+                      
+                  </div>
+              </div>
+  
+              <!-- Product Card 2 -->
+              <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <img src="./close-up-bangles-stand-sale_1048944-7363591.avif" alt="Bangle 2" class="card-img-top">
+                     
+                  </div>
+              </div>
+  
+              <!-- Product Card 3 -->
+              <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <img src="./full-frame-shot-bangles-sale-market_1048944-28771229.avif" alt="Bangle 3" class="card-img-top">
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+ <!-- section quality -->
+ <section id="quality" class="py-5 bg-light">
+<div class="container">
+    <h1 class="text-center mb-5" style="font-size: 50px;">Our Quality Bangle</h1>
+    <p class="text-center mb-5 text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, alias.</p>
+     <div class="row">
+
+        <!-- card one  -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="" alt="First" class="card-img-top img-fluid">
+                <div class="card-body">
+                    <h2 class="card-title">First</h2>
+                    <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, a labore nesciunt molestias distinctio porro, molestiae officiis numquam commodi delectus est consequatur reiciendis quaerat veritatis rem consectetur ea modi hic!</p>
+                </div>
+            </div>
+        </div>
+                    
+
+        <!-- card two  -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">Second</h2>
+                    <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, a labore nesciunt molestias distinctio porro, molestiae officiis numquam commodi delectus est consequatur reiciendis quaerat veritatis rem consectetur ea modi hic!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- card three  -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">First</h2>
+                    <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, a labore nesciunt molestias distinctio porro, molestiae officiis numquam commodi delectus est consequatur reiciendis quaerat veritatis rem consectetur ea modi hic!</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- card -three  -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">First</h2>
+                    <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, a labore nesciunt molestias distinctio porro, molestiae officiis numquam commodi delectus est consequatur reiciendis quaerat veritatis rem consectetur ea modi hic!</p>
+                </div>
+                    
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">First</h2>
+                    <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, a labore nesciunt molestias distinctio porro, molestiae officiis numquam commodi delectus est consequatur reiciendis quaerat veritatis rem consectetur ea modi hic!</p>
+                </div>
+                    
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">First</h2>
+                    <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, a labore nesciunt molestias distinctio porro, molestiae officiis numquam commodi delectus est consequatur reiciendis quaerat veritatis rem consectetur ea modi hic!</p>
+                </div>
+                    
+            </div>
+        </div>
+
+    </div>
+        
+       
+    <!-- section quality  -->
+                    
+
+
+
+    
+    
+</div>
+ </section>
+
+
+  <section id="customers" class="container py-5 ">
+    <h2 class="section-title text-center mb-5">Our Customers Love and Trust</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <img src="./businessman-black-suit-makes-thumbs-up_114579-15900.avif" class="rounded-circle mb-2" alt="Customer 1" width="150" height="150">
+        <h5 class="mt-2">Abdullah</h5>
+        <p>"Absolutely loved the design and quality!"</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="./img/lady 3.avif" class="rounded-circle mb-2" alt="Customer 2" width="150" height="150">
+        <h5 class="mt-2">Ayesha Khan</h5>
+        <p>"The bangles are even more beautiful in person."</p>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <img src="./img/lady 6.jpg" class="rounded-circle mb-2" alt="Customer 2" width="150" height="150">
+        <h5 class="mt-2">Ayesha Khan</h5>
+        <p>"The bangles are even more beautiful in person."</p>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <img src="./img/lady 5.jpg" class="rounded-circle mb-2" alt="Customer 2" width="150" height="150">
+        <h5 class="mt-2">Mariyam </h5>
+        <p>"The bangles are even more beautiful in person."</p>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <img src="./img/lady 3.avif" class="rounded-circle mb-2" alt="Customer 2" width="150" height="150">
+        <h5 class="mt-2">hania Khan</h5>
+        <p>"The bangles are even more beautiful in person."</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="./img/lady 4.avif" class="rounded-circle mb-2" alt="Customer 3" width="150" height="150">
+        <h5 class="mt-2">Sara Ali</h5>
+        <p>"Fast delivery and excellent service!"</p>
+      </div>
+    </div>
+  </section>
+
+  </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container container">
+          <div >
+              <h2>Get Connected With us</h2>
+              <p>If you have any questions about our bangle collection or want to place an order, reach out to us via the contact methods below.</p>
+          </div>
+          <div>
+              <h3>Our Address</h3>
+              <p><i class="fa-solid fa-user-tie"></i> Roshan Bangle</p>
+              <p><i class="fa-solid fa-location-dot"></i> Cloth Market Near Chori Market</p>
+              <p><i class="fa-solid fa-location-dot"></i> Hyderabad Sindh</p>
+          </div>
+          <div>
+              <h3>Call or Whatsapp Us</h3>
+              <p><i class="fa-solid fa-phone"></i> Phone Number: 03178085681</p>
+              <p><i class="fa-solid fa-comments"></i> Whatsapp: 03453573313</p>
+          </div>
+      </div>
+      <div>
+          <p>&copy; 2025 Bangles. All Rights Reserved.</p>
+      </div>
+  </footer>
+  <!-- Footer End -->
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
