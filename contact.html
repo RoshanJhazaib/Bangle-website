@@ -22,22 +22,6 @@
             box-sizing: border-box;
         }
 
-        .hero-section {
-            background: url('./gold-bangles-are-stacked-top-each-other_1188452-6967.avif') no-repeat center center/cover;
-            height: 80vh;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-
-        }
-  .hero-section h1 {
-            font-family: "Poppins", sans-serif;
-            font-size: 4rem;
-            font-weight: 700;
-        }
-
         .navbar {
             background-color: #333;
         }
@@ -51,20 +35,59 @@
 
         .navbar .navbar-nav a:hover {
             color: gold !important;
-            border-bottom: 2px solid gold;
+           
         }
 
-        .text .content h1 {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            color: white;
-            transform: translateX(-50%);
-            /* font-size: 75px; */
-            font-family: "Poppins", sans-serif;
-            font-weight: 700;
-            text-align: center;
-        }
+
+        .hero-section {
+    position: relative;
+    height: 80vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./gold-bangles-are-stacked-top-each-other_1188452-6967.avif') no-repeat center center/cover;
+    filter: blur(8px);
+    opacity: 0.3; 
+    z-index: 1;
+}
+
+.hero-section  div {
+    position: relative;
+    z-index: 2; 
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    color: black;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 1.5s ease-out forwards;
+}
+
+/* Keyframe Animation */
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+     
+      
 
         footer {
             background: #0d0552;
@@ -143,80 +166,120 @@
     <!-- Navbar start -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="./img/logo rb.png" alt="Logo" width="50px"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#"><img src="./b468bf45-ae8e-4c9a-a0a0-1413986e7d31.jpg" alt="Logo" width="30px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="mx-auto navbar-nav text-center">
                     <li class="nav-item"><a class="nav-link text-white" href="./hello.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="./product.html">Product</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="./about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+    
+                    <!-- Product Dropdown Start -->
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle text-white " href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu  text-white text-center aria-labelledby="navbarDropdown" style="background-color: #333;">
+                            <li><a class="dropdown-item" href="./product.html" >Women</a></li>
+                            <li><a class="dropdown-item" href="./kids.html">Kids</a></li>
+                           
+                          </ul>
+                        </li>
+                        <!-- Product Dropdown End -->
+                        <li class="nav-item"><a class="nav-link text-white" href="./contact.html">Contact</a></li>
+                    
                 </ul>
             </div>
         </div>
     </nav>
+    
     <!-- Navbar end -->
 
-    <!-- Main Content Start -->
+    <!-- hero  Start -->
     <section class="hero-section">
-        <h1>Welcome to Our Contact  <br>Section</h1>
+        <h1>Contect Section</h1>
     </section>
-    <!-- Main Content End -->
+    <!-- hero Content End -->
 
     <!-- Contact Form Start -->
     <div class="contact-form container mt-5">
         <h2 class="text-center mb-4">Contact Us For Bangles</h2>
-        <form>
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" class="form-control" required>
+        <div class="row">
+            <!-- Contact Form - Left Side -->
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone" name="phone" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" class="form-control" required>
+    
+            <!-- Map - Right Side -->
+            <div class="col-md-6">
+                <div class="map-container" style="height: 100%; min-height: 400px;">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.8054420182587!2d68.3689273150039!3d25.396250683821226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b335b1019d6db%3A0xa0c863942007f0e8!2sChoori%20Gali%2C%20Hyderabad%2C%20Pakistan!5e0!3m2!1sen!2s!4v1712993277711!5m2!1sen!2s" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="text" id="phone" name="phone" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </div>
-        </form>
+        </div>
     </div>
-    <!-- Contact Form End -->
+    
+    
+      <!-- Contact Form End -->
 
     <!-- Footer Start -->
     <footer>
         <div class="footer-container container">
             <div>
                 <h2>Get Connected With us</h2>
-                <p>If you have any questions about our bangle collection or want to place an order, reach out to us via the contact methods below.</p>
+                <p class="fs-5  ">If you have any questions about our bangle collection or want to place an order, reach out to us via the contact methods below.</p>
             </div>
             <div>
                 <h3>Our Address</h3>
-                <p><i class="fa-solid fa-user-tie"></i> Roshan Bangle</p>
-                <p><i class="fa-solid fa-location-dot"></i> Cloth Market Near Chori Market</p>
-                <p><i class="fa-solid fa-location-dot"></i> Hyderabad Sindh</p>
+                <p class="fs-5"><i class="fa-solid fa-user-tie"></i> Roshan Bangle</p>
+                <p class="fs-5"><i class="fa-solid fa-location-dot"></i> Cloth Market Near Chori Market</p>
+                <p class="fs-5"><i class="fa-solid fa-location-dot"></i> Hyderabad Sindh</p>
             </div>
             <div>
                 <h3>Call or Whatsapp Us</h3>
-                <p><i class="fa-solid fa-phone"></i> Phone Number: 03178085681</p>
-                <p><i class="fa-solid fa-comments"></i> Whatsapp: 03453573313</p>
+                <p class="fs-5"><i class="fa-solid fa-phone"></i> Phone Number: 03178085681</p>
+                <p class="fs-5"><i class="fa-solid fa-comments"></i> Whatsapp: 03453573313</p>
             </div>
         </div>
         <div>
-            <p>&copy; 2025 Bangles. All Rights Reserved.</p>
+            <p class="fs-5">&copy; 2025 Bangles. All Rights Reserved.</p>
         </div>
     </footer>
     <!-- Footer End -->
-
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    
 </body>
 
 </html>

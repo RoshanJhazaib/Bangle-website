@@ -32,25 +32,58 @@
 
         .navbar .navbar-nav a:hover {
             color: gold !important;
-            border-bottom: 2px solid gold;
+           
         }
 
         /* Hero styling */
         .hero-section {
-            background: url('./gold-bangles-are-stacked-top-each-other_1188452-6967.avif') no-repeat center center/cover;
-            height: 80vh;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+    position: relative;
+    height: 80vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
 
-        .hero-section h1 {
-            font-family: "Poppins", sans-serif;
-            font-size: 4rem;
-            font-weight: 700;
-        }
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./gold-bangles-are-stacked-top-each-other_1188452-6967.avif') no-repeat center center/cover;
+    filter: blur(8px);
+    opacity: 0.3; 
+    z-index: 1;
+}
+
+.hero-section  div {
+    position: relative;
+    z-index: 2; 
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    color: black;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 1.5s ease-out forwards;
+}
+
+/* Keyframe Animation */
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
         /* About styling*/
         .about-section {
@@ -83,21 +116,11 @@
 }
 
         /* Product styling */
-        .product-section {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            padding: 40px 0;
-            
-            
-        }
-
-        .product-section .container h2{
-            font-family: "Poppins", sans-serif;
-            font-size: 2.5rem;
+      #products h2{
+        font-family: "Poppins", sans-serif;
+            /* font-size: 4rem; */
             font-weight: 700;
-        }
+      }
 
         .product-card {
             width: 300px;
@@ -122,13 +145,33 @@
         }
 
         
+        .Crafted-Elegance {
+   background-color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    color: #3a2e2e;
+}
+
+.Crafted-Elegance h2 {
+    font-weight: 700;
+    color: #b88953;
+}
+
+.Crafted-Elegance p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
         /* Customers styling  */
         #customers .section-title{
             font-family: "Poppins", sans-serif;
             font-size: 2.5rem;
             font-weight: 700;
         }
-
+        #customers h5{
+            font-family: "Poppins", sans-serif;
+            /* font-size: 2.5rem; */
+            font-weight: 700;
+        }
 
         /* Footer Styling */
         footer {
@@ -173,28 +216,47 @@
 <body>
    
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="./img/logo rb.png" alt="Logo" width="50px"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="./hello.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="./product.html">Product</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="./about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="./b468bf45-ae8e-4c9a-a0a0-1413986e7d31.jpg" alt="Logo" width="30px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="mx-auto navbar-nav text-center">
+                <li class="nav-item"><a class="nav-link text-white" href="./hello.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="./about.html">About</a></li>
+
+                <!-- Product Dropdown Start -->
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle text-white " href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Product
+                    </a>
+                    <ul class="dropdown-menu  text-white text-center aria-labelledby="navbarDropdown" style="background-color: #333;">
+                        <li><a class="dropdown-item" href="./product.html" >Women</a></li>
+                        <li><a class="dropdown-item" href="./kids.html">Kids</a></li>
+                       
+                      </ul>
+                    </li>
+                    <!-- Product Dropdown End -->
+                    <li class="nav-item"><a class="nav-link text-white" href="./contact.html">Contact</a></li>
+                
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <h1>Welcome to Our About <br>Section</h1>
+        <h1>About Section</h1>
     </section>
+
+
+
+   
 
     <section class="about-section">
       <div class="container">
@@ -208,13 +270,30 @@
               <div class="col-md-6">
                   <div class="row">
                       <div class="col-4">
-                          <img src="./7jpg.jpg" alt="Bangle Crafting 1" class="img-fluid rounded mb-3">
+                          <img src="./img/jumki-set.jpg" alt="Bangle Crafting 1" class="img-fluid  mb-3">
                       </div>
                       <div class="col-4">
-                          <img src="./1 jpg.jpg" alt="Bangle Crafting 2" class="img-fluid rounded mb-3">
+                        <img src="./img/my-bangle1.jpg" alt="Bangle Crafting 1" class="img-fluid mb-3">
+
                       </div>
+
                       <div class="col-4">
-                          <img src="./6jpg.avif" alt="Bangle Crafting 3" class="img-fluid rounded mb-3">
+                        <img src="./img/my-bangle1.jpg" alt="Bangle Crafting 1" class="img-fluid  mb-3">
+
+                    </div>
+
+                    <div class="col-4">
+                      <img src="./img/my-bangle1.jpg" alt="Bangle Crafting 1" class="img-fluid mb-3">
+
+                    </div>
+
+                    <div class="col-4">
+                      <img src="./img/my-bangle1.jpg" alt="Bangle Crafting 1" class="img-fluid mb-3">
+
+                    </div>
+                      <div class="col-4">
+                        <img src="./img/my-bangle1.jpg" alt="Bangle Crafting 1" class="img-fluid mb-3">
+
                       </div>
                   </div>
               </div>
@@ -222,154 +301,142 @@
       </div>
   </section>
   
-    <!-- Product Section -->
-    <section class="product-section" class="py-5" style="background-color: #f9f9f9;">
-      <div class="container text-center">
-          <h2 class="mb-5">Our Exclusive Bangle Collections</h2>
-  
-          <!-- Product Cards Row -->
-          <div class="row">
-              <!-- Product Card 1 -->
-              <div class="col-md-4 mb-4">
-                  <div class="card">
-                      <img src="./1 jpg.jpg" alt="Bangle 1" class="card-img-top">
-                      
-                  </div>
-              </div>
-  
-              <!-- Product Card 2 -->
-              <div class="col-md-4 mb-4">
-                  <div class="card">
-                      <img src="./close-up-bangles-stand-sale_1048944-7363591.avif" alt="Bangle 2" class="card-img-top">
-                     
-                  </div>
-              </div>
-  
-              <!-- Product Card 3 -->
-              <div class="col-md-4 mb-4">
-                  <div class="card">
-                      <img src="./full-frame-shot-bangles-sale-market_1048944-28771229.avif" alt="Bangle 3" class="card-img-top">
-                      
-                  </div>
-              </div>
-          </div>
+
+
+  <section id="products" class="container mt-5">
+    <h2 class="section-title text-center fw-bold fs-1">Our Special Set</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <img src="./img/jumki-set.jpg" alt="Bangle 1" class="img-fluid bangle-img rounded">
+
       </div>
-  </section>
-
- <!-- section quality -->
- <section id="quality" class="py-5 bg-light">
-<div class="container">
-    <h1 class="text-center mb-5" style="font-size: 50px;">Our Quality Bangle</h1>
-    <p class="text-center mb-5 text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, alias.</p>
-     <div class="row">
-
-        <!-- card one  -->
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <img src="" alt="First" class="card-img-top img-fluid">
-                <div class="card-body">
-                    <h2 class="card-title">First</h2>
-                    <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, a labore nesciunt molestias distinctio porro, molestiae officiis numquam commodi delectus est consequatur reiciendis quaerat veritatis rem consectetur ea modi hic!</p>
-                </div>
-            </div>
-        </div>
-                    
-
-        <!-- card two  -->
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h2 class="card-title">Second</h2>
-                    <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, a labore nesciunt molestias distinctio porro, molestiae officiis numquam commodi delectus est consequatur reiciendis quaerat veritatis rem consectetur ea modi hic!</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- card three  -->
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h2 class="card-title">First</h2>
-                    <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, a labore nesciunt molestias distinctio porro, molestiae officiis numquam commodi delectus est consequatur reiciendis quaerat veritatis rem consectetur ea modi hic!</p>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- card -three  -->
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h2 class="card-title">First</h2>
-                    <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, a labore nesciunt molestias distinctio porro, molestiae officiis numquam commodi delectus est consequatur reiciendis quaerat veritatis rem consectetur ea modi hic!</p>
-                </div>
-                    
-            </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h2 class="card-title">First</h2>
-                    <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, a labore nesciunt molestias distinctio porro, molestiae officiis numquam commodi delectus est consequatur reiciendis quaerat veritatis rem consectetur ea modi hic!</p>
-                </div>
-                    
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h2 class="card-title">First</h2>
-                    <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, a labore nesciunt molestias distinctio porro, molestiae officiis numquam commodi delectus est consequatur reiciendis quaerat veritatis rem consectetur ea modi hic!</p>
-                </div>
-                    
-            </div>
-        </div>
-
-    </div>
+      
+      <div class="col-md-4 mb-4">
+        <img src="./img/jumki-set.jpg" alt="Bangle 2" class="img-fluid bangle-img rounded">
         
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="./img/jumki-set.jpg" alt="Bangle 1" class="img-fluid bangle-img rounded">
        
-    <!-- section quality  -->
-                    
+      </div>
 
+      <div class="col-md-4 mb-4">
+        <img src="./img/jumki-set.jpg" alt="Bangle 1" class="img-fluid bangle-img rounded">
+        
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <img src="./img/jumki-set.jpg" alt="Bangle 1" class="img-fluid bangle-img rounded">
+        
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <img src="./img/jumki-set.jpg" alt="Bangle 1" class="img-fluid bangle-img rounded">
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="about-us py-5" style="background-color: #ffffff;">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Column - Text Section -->
+        <div class="col-lg-6">
+          <h2 class="display-4 text-dark fw-bold mb-4 text-center style="letter-spacing: 1px;">Where Timeless Elegance Meets Modern Charm</h2>
+          <p class="lead text-muted mb-4" style="font-size: 1.1rem;">
+            At Roshan Bangle, we don’t just create bangles — we create experiences, memories, and moments that last.  
+            Each design is an expression of beauty, crafted with precision, and made to stand the test of time.
+          </p>
+          <div class="row">
+            <div class="col-6">
+              <p class="mb-3 text-center"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Handcrafted for Perfection</strong></p>
+            </div>
+            <div class="col-6">
+              <p class="mb-3 text-center"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Designed for Every Occasion</strong></p>
+            </div>
+            <div class="col-6">
+              <p class="mb-3 text-center"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Comfort Meets Luxury</strong></p>
+            </div>
+            <div class="col-6">
+              <p class="mb-3 text-center"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Made for the Modern Woman</strong></p>
+            </div>
+          </div>
+         
+        </div>
+       
+        <div class="col-lg-6">
+          <img src="./3jpg.webp" alt="Elegant Bangles" class="img-fluid rounded shadow-lg" style="border: 2px solid #f1f1f1; transition: all 0.3s ease-in-out;">
+        </div>
+      </div>
+    </div>
+  </section>
+   
+ <section class="Crafted-Elegance py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center mb-4">
+            <img src="./3jpg.webp" alt="Luxury Bangles" class="img-fluid rounded shadow-lg" style="max-height: 400px;">
+          </div>
+        <!-- Text Side -->
+        <div class="col-md-6">
+          <h2 class="mb-4 text-dark">Crafted Elegance, Worn with Pride</h2>
+          <p class="text-muted">
+            Our bangles aren't just accessories — they’re timeless treasures passed down through generations. 
+            Inspired by tradition and refined with modern elegance, each bangle tells a story of grace, strength, and beauty.
+          </p>
+          <p class="text-muted">
+            From shimmering gold finishes to intricate handcrafted designs, we create bangles that make every moment special. 
+            Whether it’s a wedding, festival, or a simple day out — our bangles are made to shine with you.
+          </p>
+         
+        </div>
+  
+      
+      
+  
+      </div>
+    </div>
+  </section>
+  
 
 
     
     
-</div>
- </section>
 
 
-  <section id="customers" class="container py-5 ">
+
+  <section id="customers" class="container py-5">
     <h2 class="section-title text-center mb-5">Our Customers Love and Trust</h2>
     <div class="row text-center">
       <div class="col-md-4 mb-4">
-        <img src="./businessman-black-suit-makes-thumbs-up_114579-15900.avif" class="rounded-circle mb-2" alt="Customer 1" width="150" height="150">
+        <img src="./businessman-black-suit-makes-thumbs-up_114579-15900.avif" class="rounded-circle mb-2" alt="Customer 1" width="170" height="150">
         <h5 class="mt-2">Abdullah</h5>
-        <p>"Absolutely loved the design and quality!"</p>
+        <p>""In bangles mein ek alag hi shine aur elegance hai — bilkul perfect for every occasion!</p>
       </div>
       <div class="col-md-4 mb-4">
         <img src="./img/lady 3.avif" class="rounded-circle mb-2" alt="Customer 2" width="150" height="150">
         <h5 class="mt-2">Ayesha Khan</h5>
-        <p>"The bangles are even more beautiful in person."</p>
+        <p>"Har baar naye design try karti hoon, aur har baar impress ho jaati hoon
+
+        </p>
       </div>
 
       <div class="col-md-4 mb-4">
         <img src="./img/lady 6.jpg" class="rounded-circle mb-2" alt="Customer 2" width="150" height="150">
         <h5 class="mt-2">Ayesha Khan</h5>
-        <p>"The bangles are even more beautiful in person."</p>
+        <p>""Har baar jab pehenti hoon, ek alag confidence feel hota hai"</p>
       </div>
 
       <div class="col-md-4 mb-4">
         <img src="./img/lady 5.jpg" class="rounded-circle mb-2" alt="Customer 2" width="150" height="150">
         <h5 class="mt-2">Mariyam </h5>
-        <p>"The bangles are even more beautiful in person."</p>
+        <p>"Bas ek cheez kehna chahungi — in bangles ko dekh kar pyaar ho gaya."</p>
       </div>
 
       <div class="col-md-4 mb-4">
         <img src="./img/lady 3.avif" class="rounded-circle mb-2" alt="Customer 2" width="150" height="150">
         <h5 class="mt-2">hania Khan</h5>
-        <p>"The bangles are even more beautiful in person."</p>
+        <p>""Bina kuch pehne bhi agar yeh bangles ho, toh look complete lagta hai"</p>
       </div>
       <div class="col-md-4 mb-4">
         <img src="./img/lady 4.avif" class="rounded-circle mb-2" alt="Customer 3" width="150" height="150">
@@ -381,31 +448,33 @@
 
   </section>
 
-    <!-- Footer -->
-    <footer>
-      <div class="footer-container container">
-          <div >
-              <h2>Get Connected With us</h2>
-              <p>If you have any questions about our bangle collection or want to place an order, reach out to us via the contact methods below.</p>
-          </div>
-          <div>
-              <h3>Our Address</h3>
-              <p><i class="fa-solid fa-user-tie"></i> Roshan Bangle</p>
-              <p><i class="fa-solid fa-location-dot"></i> Cloth Market Near Chori Market</p>
-              <p><i class="fa-solid fa-location-dot"></i> Hyderabad Sindh</p>
-          </div>
-          <div>
-              <h3>Call or Whatsapp Us</h3>
-              <p><i class="fa-solid fa-phone"></i> Phone Number: 03178085681</p>
-              <p><i class="fa-solid fa-comments"></i> Whatsapp: 03453573313</p>
-          </div>
-      </div>
-      <div>
-          <p>&copy; 2025 Bangles. All Rights Reserved.</p>
-      </div>
-  </footer>
-  <!-- Footer End -->
-    <!-- Bootstrap JS and jQuery -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+ 
+  
+  <footer>
+    <div class="footer-container container">
+        <div>
+            <h2>Get Connected With us</h2>
+            <p class="fs-5  ">If you have any questions about our bangle collection or want to place an order, reach out to us via the contact methods below.</p>
+        </div>
+        <div>
+            <h3>Our Address</h3>
+            <p class="fs-5"><i class="fa-solid fa-user-tie"></i> Roshan Bangle</p>
+            <p class="fs-5"><i class="fa-solid fa-location-dot"></i> Cloth Market Near Chori Market</p>
+            <p class="fs-5"><i class="fa-solid fa-location-dot"></i> Hyderabad Sindh</p>
+        </div>
+        <div>
+            <h3>Call or Whatsapp Us</h3>
+            <p class="fs-5"><i class="fa-solid fa-phone"></i> Phone Number: 03178085681</p>
+            <p class="fs-5"><i class="fa-solid fa-comments"></i> Whatsapp: 03453573313</p>
+        </div>
+    </div>
+    <div>
+        <p class="fs-5">&copy; 2025 Bangles. All Rights Reserved.</p>
+    </div>
+</footer>
+<!-- Footer End -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
