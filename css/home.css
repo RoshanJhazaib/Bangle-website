@@ -1,0 +1,142 @@
+  .navbar {
+            background-color: #333;
+        }
+
+        .navbar .navbar-nav a {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            margin-left: 20px;
+            color: white;
+        }
+
+        .navbar .navbar-nav a:hover {
+            color: gold !important;
+           
+        }
+
+        .hero-section {
+            background: url(../gold-bangles-are-stacked-top-each-other_1188452-6967.avif) no-repeat center center/cover;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+            position: relative;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-section .hero-contect {
+            color: white;
+        }
+
+        .hero-section:before {
+            background-color: rgba(0, 0, 0, 0.527);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: "";
+            position: absolute;
+        }
+
+        .hero-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+
+  
+  
+  /* Background animation */
+
+
+
+
+    .bangle-img {
+      transition: transform 0.3s;
+    }
+    .bangle-img:hover {
+      transform: scale(1.1);
+    }
+
+    .product-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 40px 0;
+            
+            
+        }
+
+        .product-section .container h2{
+            font-family: "Poppins", sans-serif;
+           
+        }
+#about h2{
+  font-weight: 800;
+      font-family: "Poppins", sans-serif;
+}
+
+    #customers .section-title{
+ font-weight: bold;
+      font-family: "Poppins", sans-serif;
+      font-size: 50px;
+      font-weight: 700;
+    }
+    
+    #customers h5{
+            font-family: "Poppins", sans-serif;
+            /* font-size: 2.5rem; */
+            font-weight: 700;
+        }
+
+
+        .card-hover:hover {
+       background-color: #0b0542;
+       color: white;
+
+    }
+    #about .section-title{
+      font-size: 40px;
+      font-weight: bold;
+      font-family: "Poppins", sans-serif;
+      font-size: 50px;
+      font-weight: 700;
+    }
+
+    footer {
+            background: #0d0552;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        footer .footer-container div {
+            flex: 1;
+            min-width: 250px;
+            padding: 10px;
+        }
+
+        footer h2, footer h3 {
+            color: #ffc800;
+        }
+
+        footer i {
+            color: #FFD43B;
+            font-size: 20px;
+        }
+
+        footer .footer-container p {
+            margin-top: 20px;
+        }
+

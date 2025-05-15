@@ -1,0 +1,188 @@
+.navbar {
+            background-color: #333;
+        }
+
+        .navbar .navbar-nav a {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            margin-left: 20px;
+            color: white;
+        }
+
+        .navbar .navbar-nav a:hover {
+            color: gold !important;
+           
+        }
+
+        /* Hero styling */
+        .hero-section {
+    position: relative;
+    height: 80vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-section {
+            background: url(../gold-bangles-are-stacked-top-each-other_1188452-6967.avif) no-repeat center center/cover;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+            position: relative;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-section .hero-contect {
+            color: white;
+        }
+
+        .hero-section:before {
+            background-color: rgba(0, 0, 0, 0.527);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: "";
+            position: absolute;
+        }
+
+        .hero-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+/* Keyframe Animation */
+
+
+
+        /* About styling*/
+        .about-section {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f7f7f7;
+        }
+
+        .about-section h2 {
+            font-family: "Poppins", sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .about-section p {
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            /* line-height: 1.6; */
+            color: #555;
+           
+        }
+
+/* quality styling  */
+#quality h1{
+    font-family: "Poppins", sans-serif;
+            /* font-size: 4rem; */
+            font-weight: 700;
+}
+
+        /* Product styling */
+      #products h2{
+        font-family: "Poppins", sans-serif;
+            /* font-size: 4rem; */
+            font-weight: 700;
+      }
+
+        .product-card {
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-card h3 {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5rem;
+            color: #333;
+            
+        }
+
+        
+        .Crafted-Elegance {
+   background-color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    color: #3a2e2e;
+}
+
+.Crafted-Elegance h2 {
+    font-weight: 700;
+    color: #b88953;
+}
+
+.Crafted-Elegance p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+        /* Customers styling  */
+        #customers .section-title{
+            font-family: "Poppins", sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        #customers h5{
+            font-family: "Poppins", sans-serif;
+            /* font-size: 2.5rem; */
+            font-weight: 700;
+        }
+
+        /* Footer Styling */
+        footer {
+            background: #0d0552;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        footer .footer-container div {
+            flex: 1;
+            min-width: 250px;
+            padding: 10px;
+        }
+
+        footer h2{
+            color: #ffc800;
+        }
+
+        footer h3{
+            color: #ffc800;
+
+        }
+        footer i {
+            color: #FFD43B;
+            font-size: 20px;
+        }
+
+        footer .footer-container p {
+            margin-top: 20px;
+        }

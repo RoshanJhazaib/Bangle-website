@@ -20,82 +20,13 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-    <style>
-        body {
-            background-color: #f4f4f4;
-        }
-
-        .navbar {
-            background-color: #333;
-        }
-
-        .navbar .navbar-nav a {
-            font-family: "Poppins", sans-serif;
-            font-weight: 600;
-            margin-left: 20px;
-            color: white;
-        }
-
-        .navbar .navbar-nav a:hover {
-            color: gold !important;
-           
-        }
-
-
-
-        .hero-section {
-            position: relative;
-            height: 80vh;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        .hero-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('./gold-bangles-are-stacked-top-each-other_1188452-6967.avif') no-repeat center center/cover;
-            filter: blur(8px);
-            opacity: 0.3;
-            z-index: 1;
-        }
-
-        .hero-section div {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-section h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            font-family: "Poppins", sans-serif;
-            font-weight: 800;
-            color: black;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: slideUp 1.5s ease-out forwards;
-        }
-
-        /* Keyframe Animation */
-        @keyframes slideUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+        <link rel="stylesheet" href="./css/product.css">
+  
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="./b468bf45-ae8e-4c9a-a0a0-1413986e7d31.jpg" alt="Logo" width="30px"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -129,21 +60,29 @@
     
     
 
-    <section class="hero-section">
-        <h1> Women Product Section</h1>
-    </section>
-    <!-- Product Section -->
-
-
-    <!-- Product Section -->
+    <section class="hero-section py-5" data-aos="fade-up" data-aos-delay="600">
+        <div class="container">
+            <div class="row align-items-center text-center justify-content-center">
+                <div class="col-lg-6 col-md-12 mb-lg-0 hero-contect ">
+                    <h2 class="display-5 fw-bold mb-2">Welcome To Women Product Section</h2>
+                    <p>At Roshan Bangles, every bangle tells a story — a perfect blend of elegance, tradition, and modern charm. We offer a handpicked collection of high-quality bangles that add a special touch to every occasion. Whether it’s a wedding, festival, or everyday wear, Roshan Bangles brings a sparkle to your style.</p>
+                    <button class="bg-warning px-3 py-1 text-white mt-3">Order Now</button>
+                </div>
+      
+                
+            </div>
+        </div>
+      
+      </section>
+  
     <!-- section quality -->
-    <section id="quality" class="py-5 bg-light">
+    <section id="quality" class="py-5 bg-light"  >
         <div class="container">
             <div class="row">
 
 
                 <!-- card one  -->
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4 "  data-aos="fade-up" data-aos-delay="600">
                     <div class="card h-100">
                         <img src="./img/jumki-set.jpg" alt="Bangle Set" class="card-img-top img-fluid">
                         <div class="card-body">
@@ -178,7 +117,7 @@
                             </div>
                 
                             <!-- Add to Cart Button -->
-                            <a href="" class="bg-warning text-white rounded-pill px-2 py-2" style="text-decoration: none;">Add to chart</a>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -186,7 +125,7 @@
 
 
                 <!-- card two  -->
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="600">
                     <div class="card h-100">
                         <img src="./img/jumki-set.jpg" alt="Bangle Set" class="card-img-top img-fluid">
                         <div class="card-body">
@@ -221,14 +160,14 @@
                             </div>
                 
                             <!-- Add to Cart Button -->
-                            <a href="" class="bg-warning text-white rounded-pill px-2 py-2" style="text-decoration: none;">Add to chart</a>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
                         </div>
                     </div>
                 </div>
                 
 
                 <!-- card three  -->
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6"  data-aos="fade-up" data-aos-delay="600">
                     <div class="card h-100">
                         <img src="./img/jumki-set.jpg" alt="Bangle Set" class="card-img-top img-fluid">
                         <div class="card-body">
@@ -263,7 +202,7 @@
                             </div>
                 
                             <!-- Add to Cart Button -->
-                            <a href="" class="bg-warning text-white rounded-pill px-2 py-2" style="text-decoration: none;">Add to chart</a>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -271,7 +210,7 @@
 
 
                 <!-- card -four  -->
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="600">
                     <div class="card h-100">
                         <img src="./img/jumki-set.jpg" alt="Bangle Set" class="card-img-top img-fluid">
                         <div class="card-body">
@@ -306,7 +245,7 @@
                             </div>
                 
                             <!-- Add to Cart Button -->
-                            <a href="" class="bg-warning text-white rounded-pill px-2 py-2" style="text-decoration: none;">Add to chart</a>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -314,7 +253,7 @@
 
                 <!-- card five  -->
 
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="600">
                     <div class="card h-100">
                         <img src="./img/jumki-set.jpg" alt="Bangle Set" class="card-img-top img-fluid">
                         <div class="card-body">
@@ -349,7 +288,7 @@
                             </div>
                 
                             <!-- Add to Cart Button -->
-                            <a href="" class="bg-warning text-white rounded-pill px-2 py-2" style="text-decoration: none;">Add to chart</a>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -358,7 +297,7 @@
 
 
                 <!-- card-six  -->
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="600">
                     <div class="card h-100">
                         <img src="./img/jumki-set.jpg" alt="Bangle Set" class="card-img-top img-fluid">
                         <div class="card-body">
@@ -393,7 +332,7 @@
                             </div>
                 
                             <!-- Add to Cart Button -->
-                            <a href="" class="bg-warning text-white rounded-pill px-2 py-2" style="text-decoration: none;">Add to chart</a>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -401,7 +340,7 @@
 
 
                 <!-- card-seven  -->
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="600">
                     <div class="card h-100">
                         <img src="./img/jumki-set.jpg" alt="Bangle Set" class="card-img-top img-fluid">
                         <div class="card-body">
@@ -436,7 +375,7 @@
                             </div>
                 
                             <!-- Add to Cart Button -->
-                            <a href="" class="bg-warning text-white rounded-pill px-2 py-2" style="text-decoration: none;">Add to chart</a>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -444,7 +383,7 @@
 
 
                 <!-- card -eight  -->
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="600">
                     <div class="card h-100">
                         <img src="./img/jumki-set.jpg" alt="Bangle Set" class="card-img-top img-fluid">
                         <div class="card-body">
@@ -479,7 +418,7 @@
                             </div>
                 
                             <!-- Add to Cart Button -->
-                            <a href="" class="bg-warning text-white rounded-pill px-2 py-2" style="text-decoration: none;">Add to chart</a>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -488,7 +427,7 @@
 
 
 
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="600">
                     <div class="card h-100">
                         <img src="./img/jumki-set.jpg" alt="Bangle Set" class="card-img-top img-fluid">
                         <div class="card-body">
@@ -523,14 +462,14 @@
                             </div>
                 
                             <!-- Add to Cart Button -->
-                            <a href="" class="bg-warning text-white rounded-pill px-2 py-2" style="text-decoration: none;">Add to chart</a>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
                         </div>
                     </div>
                 </div>
                 
 
 
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="600">
                     <div class="card h-100">
                         <img src="./img/jumki-set.jpg" alt="Bangle Set" class="card-img-top img-fluid">
                         <div class="card-body">
@@ -565,13 +504,13 @@
                             </div>
                 
                             <!-- Add to Cart Button -->
-                            <a href="" class="bg-warning text-white rounded-pill px-2 py-2" style="text-decoration: none;">Add to chart</a>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
                         </div>
                     </div>
                 </div>
                 
 
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="600">
                     <div class="card h-100">
                         <img src="./img/jumki-set.jpg" alt="Bangle Set" class="card-img-top img-fluid">
                         <div class="card-body">
@@ -606,7 +545,7 @@
                             </div>
                 
                             <!-- Add to Cart Button -->
-                            <a href="" class="bg-warning text-white rounded-pill px-2 py-2" style="text-decoration: none;">Add to chart</a>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -614,12 +553,13 @@
 
 
 
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="600">
                     <div class="card h-100">
                         <img src="./img/jumki-set.jpg" alt="Bangle Set" class="card-img-top img-fluid">
                         <div class="card-body">
                             <h2 class="card-title">Elegant Jumki Bangle Set</h2>
                             <p class="card-text text-muted">Beautiful handcrafted bangle set with fine detailing and quality finish.</p>
+                            <h5 >$56</h5>
                 
                             <!-- Quantity Selector -->
                             <div class="mb-2">
@@ -649,13 +589,13 @@
                             </div>
                 
                             <!-- Add to Cart Button -->
-                            <a href="" class="bg-warning text-white rounded-pill px-2 py-2" style="text-decoration: none;">Add to chart</a>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
                         </div>
                     </div>
                 </div>
                 
 
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="600">
                     <div class="card h-100">
                         <img src="./img/jumki-set.jpg" alt="Bangle Set" class="card-img-top img-fluid">
                         <div class="card-body">
@@ -679,7 +619,7 @@
                             </div>
                 
                             <!-- Bangle Size -->
-                            <div class="mb-3">
+                            <div class="mb-3"  data-aos="fase-up" data-aos-delay="600">
                                 <label for="size" class="form-label">Size:</label>
                                 <select class="form-select" id="size">
                                     <option value="2.4">2.4</option>
@@ -690,13 +630,13 @@
                             </div>
                 
                             <!-- Add to Cart Button -->
-                            <a href="" class="bg-warning text-white rounded-pill px-2 py-2" style="text-decoration: none;">Add to chart</a>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
                         </div>
                     </div>
                 </div>
                 
 
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="600">
                     <div class="card h-100">
                         <img src="./img/jumki-set.jpg" alt="Bangle Set" class="card-img-top img-fluid">
                         <div class="card-body">
@@ -731,14 +671,14 @@
                             </div>
                 
                             <!-- Add to Cart Button -->
-                            <a href="" class="bg-warning text-white rounded-pill px-2 py-2" style="text-decoration: none;">Add to chart</a>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
                         </div>
                     </div>
                 </div>
                 
 
                 <!-- card -ten -->
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="600">
                     <div class="card h-100">
                         <img src="./img/jumki-set.jpg" alt="Bangle Set" class="card-img-top img-fluid">
                         <div class="card-body">
@@ -762,7 +702,7 @@
                             </div>
                 
                             <!-- Bangle Size -->
-                            <div class="mb-3">
+                            <div class="mb-3"  data-aos="fase-up" data-aos-delay="600">
                                 <label for="size" class="form-label">Size:</label>
                                 <select class="form-select" id="size">
                                     <option value="2.4">2.4</option>
@@ -773,7 +713,7 @@
                             </div>
                 
                             <!-- Add to Cart Button -->
-                            <a href="" class="bg-warning text-white rounded-pill px-2 py-2" style="text-decoration: none;">Add to chart</a>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -781,7 +721,7 @@
 
 
 
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="600">
                     <div class="card h-100" id="cards-slide-3" style="display: none;">
                         <img src="./img/jumki-set.jpg" alt="Bangle Set" class="card-img-top img-fluid">
                         <div class="card-body">
@@ -791,7 +731,7 @@
                             <!-- Quantity Selector -->
                             <div class="mb-2">
                                 <label for="quantity" class="form-label">Quantity:</label>
-                                <input type="number" class="form-control" id="quantity" value="1" min="1">
+                                <input type="number" class="form-control" id="quantity" vin="1" min="1">
                             </div>
                 
                             <!-- Color Options -->
@@ -805,7 +745,7 @@
                             </div>
                 
                             <!-- Bangle Size -->
-                            <div class="mb-3">
+                            <div class="mb-3"  data-aos="fase-up" data-aos-delay="600">
                                 <label for="size" class="form-label">Size:</label>
                                 <select class="form-select" id="size">
                                     <option value="2.4">2.4</option>
@@ -816,14 +756,14 @@
                             </div>
                 
                             <!-- Add to Cart Button -->
-                            <a href="" class="bg-warning text-white rounded-pill px-2 py-2">Add to chart</a>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
                         </div>
                     </div>
                 </div>
                 
 
 
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="600">
                     <div class="card h-100" id="cards-slide-2" style="display: none;">
                         <img src="./img/jumki-set.jpg" alt="Bangle Set" class="card-img-top img-fluid">
                         <div class="card-body">
@@ -858,14 +798,14 @@
                             </div>
                 
                             <!-- Add to Cart Button -->
-                            <a href="" class="bg-warning text-white rounded-pill px-2 py-2" style="text-decoration: none;">Add to chart</a>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
                         </div>
                     </div>
                 </div>
                 
 
 
-                <div class="col-md-4 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4"  data-aos="fade-up" data-aos-delay="600">
                     <div class="card h-100" id="cards-slide" style="display: none;">
                         <img src="./img/jumki-set.jpg" alt="Bangle Set" class="card-img-top img-fluid">
                         <div class="card-body">
@@ -900,15 +840,14 @@
                             </div>
                 
                             <!-- Add to Cart Button -->
-                            <a href="" class="bg-warning text-white rounded-pill px-2 py-2" style="text-decoration: none;">Add to chart</a>
-                        </div>
+                            <button class="btn btn-primary w-100">Add to Cart</button>
                     </div>
                 </div>
                 
 
-                <button class="btn btn-warning text-white" id="btn-1">See More</button>
-
+                
             </div>
+            <button class="btn btn-warning text-white" id="btn-1">See More</button>
 
 
             <!-- section quality  -->
@@ -937,6 +876,13 @@
                 })
             </script>
 
+
+
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+<script src="./img/main.js"></script>
 </body>
 
 </html>
