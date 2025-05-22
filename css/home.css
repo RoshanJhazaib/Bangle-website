@@ -72,7 +72,8 @@
         }
 
         .product-section .container h2{
-            font-family: "Poppins", sans-serif;
+ font-weight: 800;
+      font-family: "Poppins", sans-serif;
            
         }
 #about h2{
@@ -97,6 +98,7 @@
         .card-hover:hover {
        background-color: #0b0542;
        color: white;
+       transition: all 1.3s;
 
     }
     #about .section-title{
